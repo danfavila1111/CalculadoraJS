@@ -15,18 +15,19 @@ botones.forEach(boton =>{
             return;
         }
 
-        if (boton.id === "igual"){
-            try {
-                if (pantalla.textContent.includes("/") && pantalla.textContent.split("/").length !== 2) {
-                    pantalla.textContent = "¡Error!";
-                } else {
-                    pantalla.textContent = eval(pantalla.textContent);
+        if(boton.id ==="igual"){
+            try{
+                pantalla.textContent = eval(pantalla.textContent);
+                if(pantalla.textContent === ""){
+                    pantalla.textContent = "ERROR!!!"
                 }
-            } catch {
-                pantalla.textContent = "¡Error!";
+            } catch{
+                pantalla.textContent = "ERROR!!!"
             }
+
             return;
         }
+
         
 
         if (pantalla.textContent === "0" || pantalla.textContent === "¡Error!") {
